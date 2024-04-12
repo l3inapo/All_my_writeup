@@ -1,5 +1,5 @@
 # CTF writeups
-CTF writeups and HackTheBox I've done.
+CTF and HackTheBox writeups for I've done.
 
 - HackTheBox
   - [Pilgrimage](machine/Pilgrimage/README.md).  
