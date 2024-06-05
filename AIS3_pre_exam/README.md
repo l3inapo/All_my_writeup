@@ -53,38 +53,56 @@ eval就是一個很危險的東西 可以把你執行你輸入的不管是什麼
 一開始不知道pcapng file是幹嘛的 google後發現要用wireshark打開
 原本想說是不是要連到某個網站拿flag或是說會藏flag在敘述裡 就全部都一直翻開找
 直到後面發現follow的tcp stream後 加上覺得這三個顏色很奇怪 還有題目說三維 想說也有三 就開這三個看看
+
 ![image](https://hackmd.io/_uploads/H1wM9ox4R.png)
+
 打開後發現裏頭有很多字 又看到有個G-code 就去google他 就大概知道是什麼
+
 ![image](https://hackmd.io/_uploads/BJ8ocJ-4A.png)
 丟進[模擬器裡面](https://nraynaud.github.io/webgcode/) 後就得到一個flag的圖 打出來就對了
+
 ![image](https://hackmd.io/_uploads/HJXDcixVC.png)
+
 `flag = AIS3{b4d1y_tun3d_PriN73r}`
+
 ![image](https://hackmd.io/_uploads/BJaccigNA.png)
 
 # Emoji Console
 題目是一個想要透過emoji組成可以讀取flag的指令
+
 ![image](https://hackmd.io/_uploads/SyRE8AlNA.png)
+
 透過 cat * 可以得到所有emoji的相對應符號 同時也可以知道有個flag資料夾 flag應該就在裡面
 ![image](https://hackmd.io/_uploads/BklpS2yZV0.png)
+
 我先自己創一個flag file在linux並自己根據表情符號嘗試去找出可用的emoji
 這兩個是使用到的 `"😓": ";/" , "😐": ":|"`
 並成功嘗試出指令
+
 ![image](https://hackmd.io/_uploads/BksFEybVR.png)
+
 原理是 `cd flag ; 前面執行完了 再傳到後面的ls 這樣就成功把中間的/給省略掉了`
 換成表情符號後嘗試
+
 ![image](https://hackmd.io/_uploads/rJ7eBy-VR.png)
+
 這代表我成功讀到file了 而且從標頭可以發現他就是一個python file
 
 那這時候我只要用這個🐍表情 也就是python去執行檔案 就可以得到flag了
 ` AIS3{🫵🪡🉐🤙🤙🤙👉👉🚩👈👈}`
+
 ![image](https://hackmd.io/_uploads/SkYsrJZN0.png)
 
 # Quantum Nim Heist
-這題也是網路上找到writeup 一開始打開source code後單純無聊好奇甚麼是grundy theorem 就上網google 
+這題也是網路上找到writeup 一開始打開source code後單純無聊好奇甚麼是grundy theorem 就上網google
+
 ![image](https://hackmd.io/_uploads/S1l63BXm4R.png)
+
 結果就找到了之前的writeup 不知道是不是沒有擋好哈哈
 https://gunjyo0817.github.io/2021/05/24/2021-AIS3-Pre-exam-write-up/
+
 ![image](https://hackmd.io/_uploads/ByBxIQQ40.png)
+
 當時透過看他的解析得知說在`game.py` 檔案中 系統會給後手獲勝 但我們永遠是先後手 因此正常完的話我們是贏不了的
 ```python=
 def generate_winning_game(self) -> None:
@@ -132,6 +150,7 @@ if choice == '0':
     elif choice == '2':
         break
 ```
+
 ![image](https://hackmd.io/_uploads/S1miYPV4R.png)
 
 ` AIS3{Ar3_y0u_a_N1m_ma57er_0r_a_Crypt0_ma57er?}`
@@ -276,19 +295,25 @@ _: 15712957353925589936077754216010243607185906882705709002962782529893888445549
 }: 52745488365658861485519010696623986434656675831322149607647058389953842185045922621964255927212518970223978973817292179059730382537814695353016058702226289640834171560498112170760826276332972100423555174686162215383841925656596984188536350046664199627214379076416024495451320834231863438007383528385204646269
 ```
 最後一一比對完後就得到flag了
+
 ![image](https://hackmd.io/_uploads/B1IkzuNVR.png)
+
 `flag : AIS3{NeverUseTheCryptographyLibraryImplementedYourSelf}`
+
 ![image](https://hackmd.io/_uploads/r15YYQ-E0.png)
 
 
 # Ebook Parser
 原本打開這題不知道可以如何下手 只有從作者給的requirements.txt知道他有使用了甚麼套件 其中有lxml一種來解析xml的套件 因此猜測可能XXE(?
+
 ![image](https://hackmd.io/_uploads/HJFb2f7VA.png)
 
 之後一連串google後在github上發現了一個熱騰騰的issue 不知道是不是有心人所為XD
 https://github.com/dnkorpushov/ebookmeta/issues/16
 我建了一個跟他一樣的file並命名為payload.fb2後就有成功的拿到/etc/passwd的資料
+
 ![image](https://hackmd.io/_uploads/HJQ6nzQNR.png)
+
 那這樣代表說這個issue的payload是可以用在這題上的XD 那我們這邊想要拿到的是flag 因此把etc/passwd部分替換掉 透過path traversal來讀到根目錄的flag
 
 ```xml=
@@ -324,17 +349,23 @@ https://github.com/dnkorpushov/ebookmeta/issues/16
 </FictionBook>
 ```
 上傳後就成功得到flag了 耶! 再右鍵檢查把它複製下來貼上
+
 ![image](https://hackmd.io/_uploads/BkMocsZEA.png)
 
 ![image](https://hackmd.io/_uploads/ByvjtobEC.png)
+
 `AIS3{LP#1742885: lxml no longer expands external entities (XXE) by default}`
 這次雖然是剛好有人傳了issue所以解開 但我會去了解它的原因跟做法的嗚嗚
 
 # The Long Print
 一開始我想說直接丟到 https://hexed.it/ 想說會不會flag就在裡面 有看到一個寫fake的flag 雖然知道應該是假的但還是拿去試了一下後果然是假的QQ 
+
 ![image](https://hackmd.io/_uploads/B18VHO440.png)
+
 之後就開啟ida 案F5看一下他的程式
+
 ![image](https://hackmd.io/_uploads/SJKSHu4VC.png)
+
 用GPT 幫他加個註解 可以得知他在做一個flag的運算 把secret跟key做XOR來生成flag 問題出在中間有個sleep 因此會讓程式hang在那邊很久 所以大致上的解題思路就是要跳過sleep的指令然後讓他執行12次flag就會跳出來了
 ```cpp=
 int __cdecl main(int argc, const char **argv, const char **envp)
@@ -379,7 +410,9 @@ int __cdecl main(int argc, const char **argv, const char **envp)
 ```
 那就打開gdb來操作一下(因為不會用ida 只會ida F5 XD)
 首先`info function` 可以看看他有哪些function
+
 ![image](https://hackmd.io/_uploads/HJb7Y_NEC.png)
+
 再來反編譯 main function看看裡面 這是它裡面所有的
 ```asm=
 0x00000000000011a9 <+0>:     endbr64
@@ -439,6 +472,7 @@ int __cdecl main(int argc, const char **argv, const char **envp)
 
 ```
 那我們先設一個 main的斷點 然後進去 原本想直接設一個斷點在sleep前一個但好像因為她有開保護機制 所以只能慢慢執行到那邊才可以看位置
+
 ![image](https://hackmd.io/_uploads/Bycu9uE4A.png)
 
 我這裡卡一點時間 因為我原本是使用`n` 來執行下一步 但我發現一進去就都會卡住 改成`ni`後就不會卡了 一個小疑惑點 
@@ -446,6 +480,7 @@ int __cdecl main(int argc, const char **argv, const char **envp)
 一路ni 到sleep前面後把原本要被執行的sleep那句的`$rip`改成他的下一句 因為`$rip`會指向下一個要執行的指令 改掉後他就會跳過去了 用`set $rip = 0x555555555235` 再ni就可以成功跳過去 但前面有提到是迴圈 因此上面也要設斷點 不然他會進sleep 因為我知道他flag是XOR獲得 因此我另一個斷點設在XOR的下一行 也就是 `0x55555555521f` 並且運算完的資料會存到$rax 因此只要把每次迴圈出來的rdx的值拿去轉ASCII 就可以得到flag了
 
 ![image](https://hackmd.io/_uploads/SJpTWFEN0.png)
+
 整理一次 在迴圈跳過四次指令後 就會跳到大迴圈 再到XOR的break 讀取$rdx 重複12次
 $rax   : 0x33534941
 $rax   : 0x454b4146 
@@ -461,11 +496,15 @@ $rax   : 0x656d6567
 $rax   : 0x2121746e
 $rax   : 0x7d3f2121
 轉成ASCII後倒過來看就是flag了 因為是LSB 因此要從最右邊兩個兩個往前看
+
 ![image](https://hackmd.io/_uploads/rJ4Et3NVC.png)
+
 也可以從輸出看 跑完一次他會跳一個字出來只是變成要看很多次
+
 ![image](https://hackmd.io/_uploads/rydsD34NC.png)
 
 `flag : AIS3{You_are_the_master_of_time_management!!!!?}`
+
 ![image](https://hackmd.io/_uploads/rJKPKhEN0.png)
 
 
