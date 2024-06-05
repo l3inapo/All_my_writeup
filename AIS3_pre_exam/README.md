@@ -59,6 +59,7 @@ eval就是一個很危險的東西 可以把你執行你輸入的不管是什麼
 打開後發現裏頭有很多字 又看到有個G-code 就去google他 就大概知道是什麼
 
 ![image](https://hackmd.io/_uploads/BJ8ocJ-4A.png)
+
 丟進[模擬器裡面](https://nraynaud.github.io/webgcode/) 後就得到一個flag的圖 打出來就對了
 
 ![image](https://hackmd.io/_uploads/HJXDcixVC.png)
