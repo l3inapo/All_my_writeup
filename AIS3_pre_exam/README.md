@@ -5,10 +5,12 @@
 # Welcome
 flag 就在題目上
 ![image](https://hackmd.io/_uploads/SyqCB1W4A.png)
+
 `The FLAG is AIS3{Welc0me_to_AIS3_PreExam_2o24!}`
 
 # Evil Calculator
 題目是一個用oython寫的計算機 去看他的source code後發現他在`app.py`的code中有使用到eval
+
 ```python=
 from flask import Flask, request, jsonify, render_template
 
@@ -33,12 +35,18 @@ if __name__ == '__main__':
 
 ```
 eval就是一個很危險的東西 可以把你執行你輸入的不管是什麼東西 因此就可以想塞壞壞的東西了
+
 那因為他是用post 所以就用burp抓一下然後來送payload
+
 一開始想說可能要rce 所以一直想import os 但他有ban掉底線 這邊卡很久 因為滿腦子都是想要import os 所以一直瘋狂找繞過_的方法
+
 ![image](https://hackmd.io/_uploads/BypqKyWVA.png)
+
 但主辦給提示說只要能撈到flag就好後就恍然大悟 根本不用import os 所以就直接去讀flag file 就解出來了 嘿嘿
+
 ![image](https://hackmd.io/_uploads/B14NY1bNA.png)
 ![image](https://hackmd.io/_uploads/rkWN-Yy4R.png)
+
 `flag: AIS3{7RiANG13_5NAK3_I5_50_3Vi1}`
 
 # Three Dimensional
