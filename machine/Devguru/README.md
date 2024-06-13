@@ -1,9 +1,9 @@
 - 先把主機加入/etc/hosts
-- 
+  
 ![](https://hackmd.io/_uploads/ryGl8WTza.png)
 
 - 用nmap掃有開啟甚麼port 有22跟80
-- 
+  
 ![](https://hackmd.io/_uploads/B1ufUZazT.png)
 
 - 再用dirsearch看看有沒有甚麼可用資訊 看起來是有git可以用 還有一個backend/auth的網頁
