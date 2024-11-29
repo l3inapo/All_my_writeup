@@ -14,6 +14,7 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 點進去原本是 http auth 的登入畫面 jetty 做的 但試了 admin/admin 就成功登入
 
 登入是 ActiveMQ 發現版本號有個漏洞 [CVE-2023-46604](https://github.com/evkl1d/CVE-2023-46604)
+
 ![image](https://hackmd.io/_uploads/S1wNJK6zye.png)
 
 原本照他的跑都不行 後面才想到要去看他的 `poc.xml` 修改成自己的 IP 跟 port
@@ -36,6 +37,7 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ```
 
 成功 reverse shell
+
 ![image](https://hackmd.io/_uploads/BJmibi6Myl.png)
 
 sudo -l 的結果
@@ -80,6 +82,7 @@ echo "[+] Use the SSH key to get access"
 ```
 
 透過他建立 root 的 ssh key 後在目標上連線 `ssh -i id_rsa root@10.10.11.243` 成功提權
+
 ![image](https://hackmd.io/_uploads/BkZERi6MJx.png)
 
 也有很多其他的方法 例如建立自己的 nginx.conf 去取得資料等等 可以參考這篇 [writeup](https://blog.csdn.net/qq_43007452/article/details/143097142)
