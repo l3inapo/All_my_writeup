@@ -11,5 +11,6 @@ CTF and HackTheBox writeups for I've done.
   - [Keeper](machine/Keeper/README.md).
   - [Topology](machine/Topology/README.md).
   - [BoardLight](machine/BoardLight/README.md).
+  - [Soccer](machine/Soccer/README.md).
 - Vulnhub
   - [Devguru](machine/Devguru/README.md).
