@@ -16,4 +16,4 @@ CTF and HackTheBox writeups for I've done.
 - Vulnhub
   - [Devguru](machine/Devguru/README.md).
 - PG
-  - 1
+  - [Fanatastic](machine/Fanatastic/README.md).
