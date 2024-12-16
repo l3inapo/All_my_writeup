@@ -17,3 +17,5 @@ CTF and HackTheBox writeups for I've done.
   - [Devguru](machine/Devguru/README.md).
 - PG
   - [Fanatastic](machine/Fanatastic/README.md).
+  - [Twiggy](machine/Twiggy/README.md).
+
