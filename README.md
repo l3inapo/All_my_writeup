@@ -16,6 +16,7 @@ CTF and HackTheBox writeups for I've done.
 - Vulnhub
   - [Devguru](machine/Devguru/README.md).
   - [Zico2](machine/Zico2/README.md).
+  - [LemonSqueezy1](machine/LemonSqueezy1/README.md).
 - PG
   - [Fanatastic](machine/Fanatastic/README.md).
   - [Twiggy](machine/Twiggy/README.md).
