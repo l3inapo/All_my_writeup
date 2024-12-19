@@ -14,6 +14,7 @@ CTF and HackTheBox writeups for I've done.
   - [BoardLight](machine/BoardLight/README.md).
   - [Soccer](machine/Soccer/README.md).
   - [Return](machine/Return/README.md).
+  - [Editorial](machine/Editorial/README.md).
 - Vulnhub
   - [Devguru](machine/Devguru/README.md).
   - [Zico2](machine/Zico2/README.md).
