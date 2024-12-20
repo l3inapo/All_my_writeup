@@ -15,7 +15,7 @@ CTF and HackTheBox writeups for I've done.
   - [Soccer](machine/Soccer/README.md).
   - [Return](machine/Return/README.md).
   - [Editorial](machine/Editorial/README.md).
-  - [Pandora](machine/Pandora/README.md).
+  - [Pandora](machine/Pandora/README.md). 
 - Vulnhub
   - [Devguru](machine/Devguru/README.md).
   - [Zico2](machine/Zico2/README.md).
@@ -25,5 +25,6 @@ CTF and HackTheBox writeups for I've done.
   - [Twiggy](machine/Twiggy/README.md).
   - [Astronaut](machine/Astronaut/README.md).
   - [Levram](machine/Levram/README.md).
+  - [Hub](machine/Hub/README.md). 
 
 
