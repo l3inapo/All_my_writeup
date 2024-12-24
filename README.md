@@ -13,6 +13,7 @@ CTF and HackTheBox writeups for I've done.
   - [Topology](machine/Topology/README.md).
   - [BoardLight](machine/BoardLight/README.md).
   - [Soccer](machine/Soccer/README.md).
+  - [CozyHosting](machine/CozyHosting/README.md).
   - [Return](machine/Return/README.md).
   - [Editorial](machine/Editorial/README.md).
   - [Pandora](machine/Pandora/README.md). 
