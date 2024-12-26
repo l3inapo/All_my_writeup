@@ -28,6 +28,4 @@ CTF and HackTheBox writeups for I've done.
   - [Levram](machine/Levram/README.md).
   - [Hub](machine/Hub/README.md).
   - [RubyDome](machine/RubyDome/README.md).
-  - [Algernon](machine/Algernon/README.md).
-
 
