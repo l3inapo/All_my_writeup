@@ -16,7 +16,8 @@ CTF and HackTheBox writeups for I've done.
   - [CozyHosting](machine/CozyHosting/README.md).
   - [Return](machine/Return/README.md).
   - [Editorial](machine/Editorial/README.md).
-  - [Pandora](machine/Pandora/README.md). 
+  - [Pandora](machine/Pandora/README.md).
+  - [LinkVortex](machine/LinkVortex/README.md).
 - Vulnhub
   - [Devguru](machine/Devguru/README.md).
   - [Zico2](machine/Zico2/README.md).
