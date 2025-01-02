@@ -15,6 +15,7 @@ CTF and HackTheBox writeups for I've done.
   - [Soccer](machine/Soccer/README.md).
   - [CozyHosting](machine/CozyHosting/README.md).
   - [Return](machine/Return/README.md).
+  - [Help](machine/Help/README.md).
   - [Editorial](machine/Editorial/README.md).
   - [Pandora](machine/Pandora/README.md).
   - [LinkVortex](machine/LinkVortex/README.md).
