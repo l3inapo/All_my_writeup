@@ -33,4 +33,6 @@ CTF and HackTheBox writeups for I've done.
   - [RubyDome](machine/RubyDome/README.md).
   - [Monitoring](machine/Monitoring/README.md).
   - [Algernon](machine/Algernon/README.md).
+  - [Flimsy](machine/Flimsy/README.md).
+
 
