@@ -34,5 +34,7 @@ CTF and HackTheBox writeups for I've done.
   - [Monitoring](machine/Monitoring/README.md).
   - [Algernon](machine/Algernon/README.md).
   - [Flimsy](machine/Flimsy/README.md).
+  - [Codo](machine/Codo/README.md).
+
 
 
