@@ -21,6 +21,7 @@ CTF and HackTheBox writeups for I've done.
   - [LinkVortex](machine/LinkVortex/README.md).
   - [Usage](machine/Usage/README.md).
   - [Cicada](machine/Cicada/README.md).
+  - [Active](machine/Active/README.md).
 - Vulnhub
   - [Devguru](machine/Devguru/README.md).
   - [Zico2](machine/Zico2/README.md).
